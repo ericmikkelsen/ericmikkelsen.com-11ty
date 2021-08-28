@@ -103,3 +103,6 @@ _site
 
 # TernJS port file
 .tern-port
+
+# System Files
+.DS_store
