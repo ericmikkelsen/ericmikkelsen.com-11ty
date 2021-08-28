@@ -1,7 +1,10 @@
+@font-face {
+    font-family: Fraunces;
+    src: url("/static/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format("woff2");
+  }
 html {
     font-size: 16px;
     font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
-    font-family: monospace;
     /* background-color: #eee; */
     background-color: currentColor;
     color: #000;
@@ -9,6 +12,7 @@ html {
     min-height: -webkit-fill-available;
     border-bottom: none;
     border-top: none;
+    font-family: Fraunces, Georgia, 'Times New Roman', Times, serif;
 }
 body {
     margin: 0 auto;
@@ -23,21 +27,21 @@ body > a:hover {
     display: inline-block;
     margin: 0 .125rem .25rem;
     background-color: #000;
-    font-size: clamp(1rem 1rem 1rem)
+    font-size: 1rem;
 }
 body > nav {
     background-color: lightgray;
     background-color: var(--color,lightgray);
-    padding: 5% 3% 0;
+    padding: 5%;
+    padding: clamp(1rem, 5%, 5%) clamp(1.5rem, 5%, 5%); 
     margin-bottom: 0;
-    border-left: 1rem solid transparent;
 }
 main {
     margin: -1px 0 0;
-    padding: 15% 5% 2em 3%;
+    padding: 15% 5% 5%;
+    padding: clamp(1rem, 5%, 5%) clamp(1.5rem, 5%, 5%) clamp(1rem, 5%, 5%) ;
     background-color: lightgray;
     background-color: var(--color, lightgray);
-    border-left: 1rem solid transparent;
 }
 
 * {
@@ -47,11 +51,14 @@ main {
     -webkit-padding-start: 0;
 }
 * + * {
+    margin-top: 1rem;
+}
+* + h1 ,
+* + h2 {
     margin-top: calc(1em + .5rem);
 }
 h1 {
     padding-top: 1em;
-    margin-bottom: 5%;
     font-size: 3em;
     font-size: clamp(1rem, calc(.875rem + 3vw), 4.5rem);
 }
@@ -62,23 +69,22 @@ h2 {
     font-size: 2em;
     font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
 }
+h1,h2,h3,h4,h5,h6 {
+    font-variation-settings: 'wght' 600;
+}
+p {
+    font-variation-settings: 'opsz' 10;
+}
 p,h1,h2,h3,h4,h5,h6 {
     width: 100%;
     max-width: 27em;
 
 }
-h1,h2,h3,h4,h5,h6 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    clear: both;
-}
-p {
-    font-family: monospace;
-}
+
 a {
     color: inherit;
     text-decoration-thickness: .125rem;
     text-underline-offset: .125rem;
-    /* border-radius: .5rem; */
     padding: .125rem;
 }
 a[aria-current='page'] {
@@ -93,7 +99,11 @@ a:focus {
     color: #000;
 }
 a:hover{
-    background-color: #fff;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 .25rem;
+    text-decoration-style: double;
 }
 nav { 
     margin: 0;
