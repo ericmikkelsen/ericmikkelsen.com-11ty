@@ -1,7 +1,9 @@
 @font-face {
     font-family: Fraunces;
-    src: url("/static/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format("woff2");
-  }
+    src: url("/static/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format('woff2');
+    font-style: normal;
+    font-weight: 100 900;
+}
 html {
     font-size: 16px;
     font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
@@ -13,6 +15,7 @@ html {
     border-bottom: none;
     border-top: none;
     font-family: Fraunces, Georgia, 'Times New Roman', Times, serif;
+    font-variation-settings: 'opsz' 9;
 }
 body {
     margin: 0 auto;
@@ -61,6 +64,7 @@ h1 {
     padding-top: 1em;
     font-size: 3em;
     font-size: clamp(1rem, calc(.875rem + 3vw), 4.5rem);
+    font-variation-settings: 'opsz' 36;
 }
 nav + h1 {
     margin-top: 1.5rem;
@@ -68,17 +72,11 @@ nav + h1 {
 h2 {
     font-size: 2em;
     font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
-}
-h1,h2,h3,h4,h5,h6 {
-    font-variation-settings: 'wght' 600;
-}
-p {
-    font-variation-settings: 'opsz' 10;
+    font-variation-settings: 'opsz' 36;
 }
 p,h1,h2,h3,h4,h5,h6 {
     width: 100%;
     max-width: 27em;
-
 }
 
 a {
