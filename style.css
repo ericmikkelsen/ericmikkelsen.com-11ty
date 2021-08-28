@@ -162,3 +162,8 @@ footer::before {
 * + .nav--breadcrumbs__li:before {
     content: '/';
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
