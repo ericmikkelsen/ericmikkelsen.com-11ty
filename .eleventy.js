@@ -1,4 +1,6 @@
 module.exports = function(eleventyConfig) {
+    // Copy `img/` to `_site/img`
+    eleventyConfig.addPassthroughCopy("static");
     // Add a filter using the Config API
     eleventyConfig.setTemplateFormats([
         "md",
