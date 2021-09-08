@@ -3,37 +3,100 @@ title: Just right line height
 description: 
 ---
 
-## Defining line height
+Published: September 16th, 2021
+<details>
+    <summary>Too long didn't read</summary>
+    I think you could set <code>* {line-height: calc(1em + .5rem);}</code> once, and you could basically not worry about line height for anything after that.
+</details>
 
-Line-height is extra space above and below your text. It creates extra space between lines of text. It's the web's version of leading.
+## Line height is ...
+
+Line height is the extra space above and below your text. It creates extra space between lines of text. You may have heard it being called leading.
 
 Here are some examples of different line-heights.
 
 ![This line-height is one hundred and fifty percent of the font size](/static/images/line-height-one-hundred-fifty-percent.svg)
 
-The text above has alot more space between lines. While the text below has much less space between lines. More line-height means more space as you can see in these 2 examples.
+The text above has more space between lines. While the text below has less space between lines. More line-height means more space as you can see in the examples above and below.
 
 ![This line-height is one hundred percent of the font size](/static/images/line-height-one-hundred-percent.svg)
 
 ## What is a good line height?
 
-In her Smashing Magazine article: [Balancing Line Length And Font Size In Responsive Web Design](https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-height-and-font-size), Laura Franz says: 
+In her Smashing Magazine article, [Balancing Line Length And Font Size In Responsive Web Design](https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-height-and-font-size), Laura Franz says: 
 > "Smaller type tends to need more line height, not less. A generous line height helps the eye to recognize small word shapes more easily, and it encourages horizontal motion when the eye gets tired of reading small text."
 
-The WCAG (aka Web Content Accessibility Guidelines) say: 
-> "[ ... paragraph spacing is at least 1.5 times larger than the line spacing.](https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html#:~:text=Line%20spacing%20(leading)%20is%20at%20least%20space-and-a-half%20within%20paragraphs%2C%20and%20paragraph%20spacing%20is%20at%20least%201.5%20times%20larger%20than%20the%20line%20spacing.)"
+The [Web Content Accessibility Guidelines for line height](https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html#:~:text=Line%20spacing%20(leading)%20is%20at%20least%20space-and-a-half%20within%20paragraphs%2C%20and%20paragraph%20spacing%20is%20at%20least%201.5%20times%20larger%20than%20the%20line%20spacing.) say: 
+> "... paragraph spacing is at least 1.5 times larger than the line spacing."
 
 ### I think good line height is ...
 
-So a good line-height for body copy is at least 150% of the font size, with more line height for smaller text, and less line height for larger text.
+A good line-height for body copy is at least 150% of the font size, with more line height for smaller text, and less line height for larger text.
 
-## Finding a universal line height
+## Finding a line height that works anywhere.
 
-As a developer who works with designers, I try to find a way to make it easy to repeat the usability and beauty of what my designers dreamed up. I try to come up with rules, based on their designs.
+There's usually logic and patterns to what designers create. As a developer it makes my life easier when I understand those patterns and logic. 
 
-If we look at the extra space in our line height on our body copy, I think that's probably a good guide for how much extra space all the line heights on everything should be. 
+### Please forgive my math
 
-### Forgive my math
+A pattern I often see is 8px more than the font size used for a line height. For example, I'll often see body copy set at 16px, and the line height set at 24px, which is 150% of 16px like we mentioned above.
 
-If our font size on body copy is 16px and our line height is 24px(150% of the font-size), that's 8px of extra space. 
+Here's my theory: 8px is the usually the extra space you want for a line height.
 
+Here's some random numbers that I think look great for copy:
+
+- Font size: 16px and line height: 24px is super common for body copy.
+- Font size: 8px and line height: 16px is great for that tiny copyright notice in your footer that no one cares about.
+- Font size: 32px and line height: 40px is fun for some big chunky headings.
+
+For web developers, here's a simple way to standardize that extra 8px: 
+
+`line-height: calc(1em + .5rem);`
+
+The 1em above refers to 100% of the font-size of  your text. The .5rem refers to half of your html element's font size (which most people leave at or set at 16px). Now you can just do this once on your stylesheet and never set it again:
+
+```
+* {
+    line-height: calc(1em + .5rem);
+} 
+```
+
+### It gets awesome with fluid type.
+
+I'm a big fan of fluid type, for example on my site I use the following for my heading level 2s.
+
+```
+* {
+    line-height: calc(1em + .5rem);
+}
+h2 {
+    font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
+}
+```
+
+This way no matter how big or small my font size gets, the 8px extra maintains no matter what. On the smallest screens the when the font size is 16px the line height is 24px letting the font breathe, and on larger screens the line-height is 56px.
+
+Sidenote: these numbers aren't totally true to what I'm doing on my site, since my html font size is also fluid and that makes it more complicated. I wanted to keep it simple. That said the same logic applies.
+
+## Make it yours
+
+Pending on what font you use on your site, you might pick a little less extra space like 6px or a little more like 9px. That's cool friend, you do you.
+
+### Different fonts different line heights.
+Or maybe you have 2 different fonts and each one needs a slightly different extra amount of space. You could probably do something cool with CSS variables like: 
+
+```
+* {
+    line-height: calc( 1em + var(--line-height-extra, .5rem) );
+}
+.heading-font {
+    --line-height-extra: .32rem;
+    font-family: "Headline Font" serif;
+    font-size: 2rem;
+    /* this will have a  */
+}
+.body-font {
+    --line-height-extra: .5rem;
+    font-family: "Body Font" sans-serif;
+}
+```
