@@ -43,7 +43,7 @@ const colors = {
     // "deepskyblue": "#00bfff",
     // "dimgray": "#696969",
     // "dimgrey": "#696969",
-    "dodgerblue": "#1e90ff",
+    // "dodgerblue": "#1e90ff",
     // "firebrick": "#b22222",
     // "floralwhite": "#fffaf0",
     // "forestgreen": "#228b22",
