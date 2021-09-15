@@ -6,7 +6,15 @@ description:
 Published: September 16th, 2021
 <details>
     <summary>Too long didn't read</summary>
-    I think you could set <code>* {line-height: calc(1em + .5rem);}</code> once, and you could basically not worry about line height for anything after that.
+    <div>
+        <p>I think you could set </p>
+<pre>
+<code>* {
+  line-height: calc(1em + .5rem)
+}</code>
+</pre> 
+        <p>once, and you could basically not worry about line height for anything after that.</p>
+    </div>
 </details>
 
 ## Line height is ...
@@ -50,14 +58,15 @@ Here's some random numbers that I think look great for copy:
 - Font size: 32px and line height: 40px is fun for some big chunky headings.
 
 For web developers, here's a simple way to standardize that extra 8px: 
-
-`line-height: calc(1em + .5rem);`
+```
+line-height: calc(1em + .5rem);
+```
 
 The 1em above refers to 100% of the font-size of  your text. The .5rem refers to half of your html element's font size (which most people leave at or set at 16px). Now you can just do this once on your stylesheet and never set it again:
 
 ```
 * {
-    line-height: calc(1em + .5rem);
+  line-height: calc(1em + .5rem);
 } 
 ```
 
@@ -67,10 +76,10 @@ I'm a big fan of fluid type, for example on my site I use the following for my h
 
 ```
 * {
-    line-height: calc(1em + .5rem);
+  line-height: calc(1em + .5rem);
 }
 h2 {
-    font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
+  font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
 }
 ```
 
@@ -87,16 +96,18 @@ Or maybe you have 2 different fonts and each one needs a slightly different extr
 
 ```
 * {
-    line-height: calc( 1em + var(--line-height-extra, .5rem) );
+  line-height: calc( 1em + var(--line-height-extra, .5rem) );
 }
 .heading-font {
-    --line-height-extra: .32rem;
-    font-family: "Headline Font" serif;
-    font-size: 2rem;
-    /* this will have a  */
+  --line-height-extra: .32rem;
+  font-family: "Headline Font" serif;
+  font-size: 2rem;
+  /* this will have a  line-height of 2.32rem */
 }
 .body-font {
-    --line-height-extra: .5rem;
-    font-family: "Body Font" sans-serif;
+  --line-height-extra: .5rem;
+  font-family: "Body Font" sans-serif;
 }
 ```
+
+If you go with the universal line-height, you can pretty much just stop worrying about setting line height anywhere. Which makes things like font utilities easier.
