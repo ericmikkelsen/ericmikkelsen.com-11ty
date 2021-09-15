@@ -185,7 +185,12 @@ ul {
 li * + * {
     margin-top: calc(.5em + .25rem);
 }
-
+time {
+    display: block;
+}
+header {
+    max-width: 100%;
+}
 footer {
     color: var(--color);
     line-height: .9;
@@ -206,16 +211,20 @@ footer::before {
 img {
     width: 100%;
     height: auto;
-    background-color: rgba(255,255,255,.5)
+    background-color: rgba(255,255,255,.5);
+    border-radius: 1.5rem;
 }
 
 pre {
     overflow: auto;
-    background: #333;
+    background: rgba(0,0,0,.75);
     color: #fff;
     padding: 1rem;
     width: fit-content;
     max-width: 100%;
+    border-radius: 1.5rem;
+    color: var(--color, lightgray);
+    color: #fff;
 }
 
 
