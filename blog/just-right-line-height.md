@@ -1,23 +1,9 @@
 ---
 title: Just right line height
 description: 
+date: 2021-09-15
+layout: single-post.njk
 ---
-
-Published: September 16th, 2021
-<details>
-    <summary>Too long didn't read</summary>
-    <div>
-        <p>I think you could set </p>
-<pre>
-<code>* {
-  line-height: calc(1em + .5rem)
-}</code>
-</pre> 
-        <p>once, and you could basically not worry about line height for anything after that.</p>
-    </div>
-</details>
-
-## Line height is ...
 
 Line height is the extra space above and below your text. It creates extra space between lines of text. You may have heard it being called leading.
 
@@ -95,14 +81,15 @@ Pending on what font you use on your site, you might pick a little less extra sp
 Or maybe you have 2 different fonts and each one needs a slightly different extra amount of space. You could probably do something cool with CSS variables like: 
 
 ```
+html {
+  font-size: 1rem;
+}
 * {
   line-height: calc( 1em + var(--line-height-extra, .5rem) );
 }
 .heading-font {
   --line-height-extra: .32rem;
-  font-family: "Headline Font" serif;
   font-size: 2rem;
-  /* this will have a  line-height of 2.32rem */
 }
 .body-font {
   --line-height-extra: .5rem;
@@ -110,4 +97,6 @@ Or maybe you have 2 different fonts and each one needs a slightly different extr
 }
 ```
 
-If you go with the universal line-height, you can pretty much just stop worrying about setting line height anywhere. Which makes things like font utilities easier.
+For the .heading-font you're going to have 2.32rem for your line-height, and for the .body-font you're going to get 1.5rem;
+
+I think just worrying about just the extra space makes more sense to me. But I'm most excited about fluid type sizes with consistent line-heights.
