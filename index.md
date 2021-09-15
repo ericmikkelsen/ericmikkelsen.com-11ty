@@ -1,12 +1,18 @@
 ---
-title: Hey there, I'm an empathy driven web developer.
+title: One more bay area guy making websites.
 permalink: /
 layout: index.njk
 description: Web Developer and Fartsy artist living in the Bay area.
 ---
 
-That sounds like some hooey though, what do I mean? I mean when collaborating with a team, I talk about how people use websites. Like people using screen readers, or keyboards, or touch screens, or low to medium speed internet connections, or library computers.
+ I'm a web developer. If you're in the tech world, that means I love CSS, write Javscript, can do React/Vue/Svelte, worry about accessbility, obsess over performance, program in HTML, and started on Wordpress.
 
-## I also kill time making art
+ If you're my Aunt Sophie (HI SOPHIE!), that means I make websites.
+
+## Where I'm at.
+
+I work at a [Boldium](https://boldium.com), where I work with a great team of people solving problems and building websites for clients, while still caring about the planet and people.
+
+## I kill time making art(ish)
 
 I love glitching, screen printing, generative-ing, risographing, and pixelating.
