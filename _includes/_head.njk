@@ -16,11 +16,22 @@
     <body>
         <a href="#h1">Skip to content</a>
         <nav>
-            <a href="/" aria-current="page">Eric Mikkelsen</a>
-            {# <ul>
-                <li><a href="/art">Art</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="#art">Projects</a></li>
-                <li><a href="#art">Resume</a></li>
-            </ul> #}
+            <a 
+                href="/" 
+                {{ "aria-current=page" if page.url == "/"}}
+            >
+                Eric Mikkelsen
+            </a>
+            <ul>
+                {% for link in nav %}
+                    <li>
+                        <a 
+                            href="{{link.url}}"
+                            {{ "aria-current=page" if link.url == page.url}}
+                        >
+                            {{link.text}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </nav>
