@@ -1,13 +1,15 @@
 ---
-title: I make better websites.
+title: One more bay area guy making websites.
 permalink: /
 layout: index.njk
 description: Web Developer and Fartsy artist living in the Bay area.
 ---
 
-I make better websites, by making websites for people. People who are blind. People who are in the middle of nowhere holding their phones over their head trying to "catch" a signal. People who are sitting on a toilet in a concrete building. People who are deaf. People with phones that cost a hundred bucks (or less). People who are holding a bag of groceries in their good hand, and are using their phone with the accuracy of a 2 year old in the other hand. People who have motor function problems. People like you.
+ I'm a web developer. If you're in the tech world, that means I love CSS, know Javscript, can do React/Vue/Svelte, worry about accessbility, obsess over performance, program in HTML, and started on Wordpress.
 
-## Where I'm at
+ If you're my Aunt Sophie (HI SOPHIE!), that means I make websites.
+
+## Where I'm at.
 
 I work at a [Boldium](https://boldium.com), where I work with a great team of people solving problems and building websites for clients, while still caring about the planet and people.
 
