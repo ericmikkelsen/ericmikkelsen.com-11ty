@@ -7,9 +7,8 @@
 html {
     font-size: 16px;
     font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
-    /* background-color: #eee; */
     background-color: currentColor;
-    color: #000;
+    color: #222;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     border-bottom: none;
@@ -23,14 +22,15 @@ body {
     min-width: 90%;
     max-width: 100%;
 }
-body > a,
-body > a:hover {
+body > a {
     color: var(--color, lightgray);
     padding: .125rem;
     display: inline-block;
     margin: 0 .125rem .25rem;
-    background-color: #000;
     font-size: 1rem;
+}
+body > a:focus {
+    background-color: #000;
 }
 body > nav {
     background-color: lightgray;
@@ -42,7 +42,7 @@ body > nav {
 main {
     margin: -1px 0 0;
     padding: 15% 5% 5%;
-    padding: clamp(1rem, 5%, 5%) clamp(1.5rem, 5%, 5%) clamp(1rem, 5%, 5%) ;
+    padding: clamp(1.5rem, 5%, 5%);
     background-color: lightgray;
     background-color: var(--color, lightgray);
 }
@@ -54,11 +54,10 @@ main {
     -webkit-padding-start: 0;
 }
 * + * {
-    margin-top: 1rem;
-}
-* + h1 ,
-* + h2 {
     margin-top: calc(1em + .5rem);
+}
+* + li {
+    margin-top: calc(.5em + .25rem);
 }
 h1 {
     padding-top: 1em;
@@ -74,7 +73,7 @@ h2 {
     font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
     font-variation-settings: 'opsz' 36;
 }
-p,h1,h2,h3,h4,h5,h6 {
+main > * {
     width: 100%;
     max-width: 27em;
 }
@@ -84,8 +83,13 @@ a {
     text-decoration-thickness: .125rem;
     text-underline-offset: .125rem;
     padding: .125rem;
+    transition: .1s transform;
+    transform: scale(1.000001);
 }
-a[aria-current='page'] {
+a:active {
+    transform: scale(.95);
+}
+a[aria-current="page"] {
     text-decoration: none;
     font-style: italic;
     font-weight: bold;
@@ -93,15 +97,20 @@ a[aria-current='page'] {
 a:focus {
     outline: none;
     outline: solid .125rem;
-    background-color: #fff;
-    color: #000;
 }
-a:hover{
+a:hover { 
+    text-decoration-style: double;
+}
+nav a:hover,
+main a:hover{
     background-image: linear-gradient(#fff, #fff);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: 0 .25rem;
-    text-decoration-style: double;
+}
+nav a:focus,
+main a:focus{
+    background-color: #fff;
 }
 nav { 
     margin: 0;
@@ -164,6 +173,16 @@ footer::before {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    background-color: rgba(255,255,255,.5)
+}
+
+pre {
+    overflow: auto;
+}
+
+.LinkList__link {
+    display: inline-block;
+    padding: .5rem 0;
 }
