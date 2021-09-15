@@ -1,0 +1,11 @@
+{% include "_head.njk" %}
+    <main>
+        <header>
+            <h1 id="h1">{{title}}</h1>
+            {% if page.date %}
+                <time>{{page.date|postDate}}</time>
+            {% endif %}
+        </header>
+        {{content | safe}}
+    </main>
+{% include "_footer.njk" %}
