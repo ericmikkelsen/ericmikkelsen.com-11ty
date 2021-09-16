@@ -18,12 +18,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
+      - name: Installs website-carbon-cli
       - run: npm i website-carbon-cli
       - name: View context attributes
         uses: actions/github-script@v4
         with:
           script: |
-            const {runCarbonTest } = require('./node_modules/website-carbon-cli/website-carbon.js')
+            const {runCarbonTest } = require('website-carbon-cli/website-carbon.js')
             // https://davidwells.io/snippets/regex-match-markdown-links
             console.log(github)
             const getLinksFromMarkdown = mdContents => {
