@@ -6,13 +6,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [15.x]
-
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -33,7 +27,7 @@ jobs:
             const singleMatch = /\[([^\[]+)\]\((.*)\)/
             const links = matches.map((link)=>{
             const text = singleMatch.exec(link) 
-              return { text: text[1], url: text[2] }
+            return { text: text[1], url: text[2] }
             })
             return links
             }
