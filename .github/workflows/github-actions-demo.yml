@@ -1,24 +1,18 @@
 name: Node.js CI
-
-on:
-  pull_request:
-    branches: [ main ]
-
+on: pull_request
 jobs:
-  build:
+  echo-input:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Installs website-carbon-cli
-      - run: npm i website-carbon-cli
-      - name: View context attributes
-        uses: actions/github-script@v4
+      - run: npm install website-carbon-cli
+      - uses: actions/github-script@v4
         with:
           script: |
-            const {runCarbonTest } = require('website-carbon-cli/website-carbon.js')
+            const {runCarbonTest } = require('./node_modules/website-carbon-cli/website-carbon.js')
             // https://davidwells.io/snippets/regex-match-markdown-links
             console.log(github)
             const getLinksFromMarkdown = mdContents => {
@@ -27,7 +21,7 @@ jobs:
             const singleMatch = /\[([^\[]+)\]\((.*)\)/
             const links = matches.map((link)=>{
             const text = singleMatch.exec(link) 
-            return { text: text[1], url: text[2] }
+              return { text: text[1], url: text[2] }
             })
             return links
             }
