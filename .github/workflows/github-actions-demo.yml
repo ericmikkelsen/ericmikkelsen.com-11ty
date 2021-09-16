@@ -14,7 +14,15 @@ jobs:
         node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: npm i markdown-wasm
       - name: View context attributes
         uses: actions/github-script@v4
         with:
-          script: console.log(context) 
+          script: |
+            const markdown = require("./node_modules/markdown-wasm/dist/markdown.node.js");
+            const pr_body = markdown.parse( context.payload.pull_request.body );
+            console.log(pr_body);
