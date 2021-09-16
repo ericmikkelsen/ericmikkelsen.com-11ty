@@ -28,7 +28,7 @@ jobs:
             const matches = mdContents.match(regexMdLinks)
             const singleMatch = /\[([^\[]+)\]\((.*)\)/
             const links = matches.map((link)=>{
-            const text = singleMatch.exec(matches[link]) 
+            const text = singleMatch.exec(link) 
             return { text: text[1], url: text[2] }
             })
             return links
