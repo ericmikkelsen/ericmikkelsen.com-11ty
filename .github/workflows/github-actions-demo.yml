@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-        run: echo ${{ github.event.pull_request }}
+        run: echo ${{ github.event.pull_request.label.description }}
