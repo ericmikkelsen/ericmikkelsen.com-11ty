@@ -23,6 +23,18 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            const markdown = require("./node_modules/markdown-wasm/dist/markdown.node.js");
-            const pr_body = markdown.parse( context.payload.pull_request.body );
-            console.log(pr_body);
+            // https://davidwells.io/snippets/regex-match-markdown-links
+            const getLinksFromMarkdown = mdContents => {
+            const regexMdLinks = /\[([^\[]+)\](\(.*\))/gm
+            const matches = mdContents.match(regexMdLinks)
+            const singleMatch = /\[([^\[]+)\]\((.*)\)/
+            const links = matches.map((link)=>{
+            const text = singleMatch.exec(matches[link]) 
+            return { text: text[1], url: text[2] }
+            })
+            return links
+            }
+            const links = getLinksFromMarkdown(context.payload.pull_request.body);
+            console.log(links)
+
+            
