@@ -17,4 +17,4 @@ jobs:
       - name: View context attributes
         uses: actions/github-script@v4
         with:
-          script: console.log(context)
+          script: console.log(context) 
