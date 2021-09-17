@@ -22,24 +22,7 @@ jobs:
         uses: actions/github-script@v4
         with:
           script: |
-            // https://davidwells.io/snippets/regex-match-markdown-links
-            const getLinksFromMarkdown = mdContents => {
-            const regexMdLinks = /\[([^\[]+)\](\(.*\))/gm
-            const matches = mdContents.match(regexMdLinks)
-            const singleMatch = /\[([^\[]+)\]\((.*)\)/
-            const links = matches.map((link)=>{
-            const text = singleMatch.exec(link) 
-            return { text: text[1], url: text[2] }
-            })
-            return links
-            }
-            const links = getLinksFromMarkdown(context.payload.pull_request.body);
-            console.log(links);
-            // links.foreach(link => {
-            //   const runTest = link.text.substring(0,7).toLowerCase === 'testbox'
-            //   if(runTest){
-            //     console.log(link);
-            //   }
-            // })
-            
+            const {runTasksOnPRBody} = require('./.github/workflows/run-tasks-on-pr-body.js');
+            const PRBody = context.payload.pull_request.body;
+            runTasksOnPRBody(PRBody);
             
