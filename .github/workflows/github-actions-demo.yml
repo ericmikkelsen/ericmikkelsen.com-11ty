@@ -1,28 +1,11 @@
-name: Node.js CI
-
+name: Daily color update
 on:
-  pull_request:
-    branches: [ main ]
-
+  schedule:
+    # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 5 * * *'
 jobs:
-  build:
-
+  say_hello:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [15.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - name: View context attributes
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const {runTasksOnPRBody} = require('./.github/workflows/run-tasks-on-pr-body.js');
-            const PRBody = context.payload.pull_request.body;
-            runTasksOnPRBody(PRBody);
-            
+      - run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{secrets.NETLIFY_DEPLOY_KEY}}?trigger_title=Daily+color+update+from+Github
