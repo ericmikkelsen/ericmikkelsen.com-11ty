@@ -1,0 +1,11 @@
+name: Daily color update
+on:
+  schedule:
+    # https://docs.github.com/en/actions/reference/events-that-trigger-workflows#schedule
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 5 * * *'
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -X POST -d {} https://api.netlify.com/build_hooks/${{secrets.NETLIFY_DEPLOY_KEY}}?trigger_title=Daily+color+update+from+Github
