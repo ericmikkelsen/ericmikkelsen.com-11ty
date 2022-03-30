@@ -30,12 +30,21 @@ body {
     flex-direction: column;
 
 }
-body > a {
+.skip {
+    background: #000;
+    padding: .5rem 5%;
+    text-align: center;
+    margin: 0;
+}
+.skip__link {
     padding: .5rem 0;
     display: inline-block;
-    margin: .5rem 5% 0;
+    margin:0;
     font-size: .875rem;
-    text-align: center;
+    width: 100%;
+}
+.skip__link:hover {
+    text-decoration-color: #fff;
 }
 body > nav {
     padding: 1rem 5%;
