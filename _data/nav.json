@@ -2,5 +2,9 @@
     {
         "text": "Blog",
         "url": "/blog/"
+    },
+    {
+        "text": "Resume",
+        "url": "/resume/"
     }
 ]

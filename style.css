@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 *+ :where(h2, h3, h4, h5, h6) {
-    margin-top: calc(2em + 1rem);
+    margin-top: calc(1em + 2rem);
 }
 
 a {
@@ -180,9 +180,20 @@ a:active {
     text-decoration-thickness: .1em;
 }
 
-a[aria-current="page"] {
+nav a[aria-current="page"] {
     color: inherit;
-    /* text-decoration: none; */
+    position: relative;
+}
+nav a[aria-current="page"]::before {
+    content: '';
+    position: absolute;
+    left: -.75rem;
+    top:1.25em;
+    width: 0; 
+    height: 0; 
+    border-top: .25rem solid transparent;
+    border-bottom: .25rem solid transparent;
+    border-left: .375em solid currentColor;
 }
 
 details div {
@@ -211,10 +222,6 @@ ul {
 
 li *+* {
     margin-top: calc(.5em + .25rem);
-}
-
-time {
-    display: block;
 }
 
 header {
@@ -263,4 +270,35 @@ pre {
 .LinkList__link {
     display: inline-block;
     padding: .5rem 0;
+}
+
+@media print {
+    :root {
+        font-size: 1rem;
+    }
+    nav,footer,.skip__wrapper {
+        display: none;
+    }
+    h1 {
+        margin: 0;
+    }
+    * + * {
+        margin-top: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    main {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    main>* {
+        max-width: 100%;
+    }
+    .page-break{
+        page-break-before:always;
+    }
 }
