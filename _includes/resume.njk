@@ -1,0 +1,24 @@
+{% include "_head.njk" %}
+    <main>
+        <header>
+            <h1 id="h1">{{title}}</h1>
+        </header>
+        {{content | safe}}
+        <h2>Work History</h2>
+        {% for job in workHistory %}
+            <h3>{{job.organization}} </h3>
+            
+            <p>
+                <b>{{job.jobTitle}}</b> — <time>{{job.date}}</time>
+                <br>{{job.description|safe}}
+            </p>
+        {% endfor %}
+
+        <h2 class='page-break'>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+                <li>{{skill}}</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% include "_footer.njk" %}
