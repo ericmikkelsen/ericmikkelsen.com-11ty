@@ -32,7 +32,6 @@ skills:
  - Node
  - PHP
  - React
- - SSH
  - SVG
  - Vue
  - Wordpress

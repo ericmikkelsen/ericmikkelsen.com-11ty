@@ -5,10 +5,10 @@
         </header>
         {{content | safe}}
         {% for job in workHistory %}
-            <h3>{{job.organization}} </h3>
+            <h3>{{job.organization}} — {{job.jobTitle}}</h3>
             
             <p>
-                <em>{{job.jobTitle}}</em> — <time>{{job.date}}</time>
+                <time>{{job.date}}</time>
                 <br>{{job.description|safe}}
             </p>
         {% endfor %}
