@@ -4,12 +4,11 @@
             <h1 id="h1">{{title}}</h1>
         </header>
         {{content | safe}}
-        <h2>Work History</h2>
         {% for job in workHistory %}
             <h3>{{job.organization}} </h3>
             
             <p>
-                <b>{{job.jobTitle}}</b> — <time>{{job.date}}</time>
+                <em>{{job.jobTitle}}</em> — <time>{{job.date}}</time>
                 <br>{{job.description|safe}}
             </p>
         {% endfor %}

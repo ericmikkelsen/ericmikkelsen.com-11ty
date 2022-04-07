@@ -41,3 +41,7 @@ skills:
 Email: [eric@ericmikkelsen.com](mailto:eric@ericmikkelsen.com)
 
 I'm a [Web Accessibility Specialist](https://www.accessibilityassociation.org/s/wascertification) and web developer focusing on what makes things easier for humans, whether it's accessibilty, web performance, or just being a decent human being.
+
+## Work history
+
+This is every where I worked, aside from my 13 year stint at Starbucks.
