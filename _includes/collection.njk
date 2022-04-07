@@ -6,11 +6,15 @@
         </header>
         {{content | safe}}
         {% set items = collections[colleciton] %}
+        <ul>
         {% for item in items %}
                 {% if item.data.excerpt %}
-                    <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
-                    <p>{{item.data.excerpt}}</p>
+                    <li>
+                        <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
+                        <p>{{item.data.excerpt}}</p>
+                    </li>
                 {% endif %}
         {% endfor %}
+        </ul>
     </main>
 {% include "_footer.njk" %}
