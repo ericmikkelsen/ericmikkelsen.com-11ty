@@ -10,6 +10,12 @@ body{
     scrollbar-width: 3.75em;
     margin:0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+::selection {
+    background: var(--selection-bg,var(--color));
+    color: var(--selection,#fff);
 }
 ::-webkit-scrollbar {
     --down-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M38 16H10l14 24z'/%3E%3C/svg%3E");
@@ -57,7 +63,11 @@ html {
     --cta-outer-y: .5rem;
     --container-padding-x: 10%;
 }
-
+hr {
+    border: none;
+    border-top: 1px solid;
+    opacity: .25;
+}
 @media (min-width: 37.5em) {
     html {
         background-repeat: repeat;
@@ -98,6 +108,7 @@ body {
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
+    --selection:#fff;
 }
 
 .skip__link:hover {
@@ -126,13 +137,13 @@ nav * + * {
 
 main {
     background-color: #fff;
-    padding: var(--container-padding-x);
-    margin: 0;
+    padding: 3rem var(--container-padding-x);
+    margin: 0 0 auto;
 }
 
 main>* {
     width: 100%;
-    max-width: 27em;
+    max-width: 32em;
 }
 
 h1 {
@@ -153,14 +164,15 @@ h2 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    max-width: 37rem;
+    max-width: 28ch;
 }
 
-*+ :where(h2, h3, h4, h5, h6) {
+*+ :where(h2, h3, h4, h5, h6,hr) {
     margin-top: calc(1em + 2rem);
 }
 
 a {
+    --selection: #000;
     color: var(--color, #767676);
     text-decoration-thickness: .15rem;
     text-underline-offset: .25em;
@@ -229,6 +241,8 @@ header {
 }
 
 footer {
+    --selection-bg: #000;
+    --selection: #fff;
     border-top: .125rem solid #000;
     background-color: var(--color);
     color: #000;
@@ -236,7 +250,6 @@ footer {
 }
 
 footer strong {
-    color: #fff;
     text-transform: uppercase;
 }
 
@@ -265,11 +278,6 @@ pre {
     max-width: 100%;
     border-radius: 1.5rem;
     white-space: pre-wrap;
-}
-
-.LinkList__link {
-    display: inline-block;
-    padding: .5rem 0;
 }
 
 @media print {

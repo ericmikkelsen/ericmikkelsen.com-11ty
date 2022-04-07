@@ -21,20 +21,14 @@
             </div>
         </div>
         <nav>
-            <a 
-                href="/" 
-                {{ "aria-current=page" if page.url == "/"}}
-            >
-                Eric Mikkelsen
-            </a>
             <ul>
                 {% for link in nav %}
-                    <li>
+                    <li {{ "class=nav__current-li" if link.url == page.url}}>
                         <a 
                             href="{{link.url}}"
                             {{ "aria-current=page" if link.url == page.url}}
                         >
-                            {{link.text}}
+                            {{link.text|safe}}
                         </a>
                     </li>
                 {% endfor %}

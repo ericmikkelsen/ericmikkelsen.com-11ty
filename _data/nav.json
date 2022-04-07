@@ -1,7 +1,15 @@
 [
     {
+        "text": "Eric Mikkelsen",
+        "url": "/"
+    },
+    {
         "text": "Blog",
         "url": "/blog/"
+    },
+    {
+        "text": "Projects",
+        "url": "/projects/"
     },
     {
         "text": "Resume",

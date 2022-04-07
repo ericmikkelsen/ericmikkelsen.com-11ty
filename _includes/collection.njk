@@ -1,0 +1,20 @@
+
+{% include "_head.njk" %}
+    <main>
+        <header>
+            <h1 id="h1">{{title}}</h1>
+        </header>
+        {{content | safe}}
+        {% set items = collections[colleciton] %}
+        <ul>
+        {% for item in items %}
+                {% if item.data.excerpt %}
+                    <li>
+                        <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
+                        <p>{{item.data.excerpt}}</p>
+                    </li>
+                {% endif %}
+        {% endfor %}
+        </ul>
+    </main>
+{% include "_footer.njk" %}

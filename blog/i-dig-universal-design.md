@@ -23,7 +23,7 @@ I used to think doing my CSS tricks was making my work more equitable and giving
 
 When designers, user experience people, and content strategists aren't involved in decisions around the experience, you're not lifting that shortie up, you're telling them to go watch some different team because very different people made their experience. This other team has fewer players, where everyone's a good pitcher and no one can hit a ball. In other words, your developers are creating the experience for some of your users.
 
-### We're making experiences that separate but not equal.
+### We're making experiences that are separate but not equal.
 
 Sure people can now see the game, and I guess that's better than nothing. But that's a different experience. It's a separate experience. And singling out a group of people and giving them a separate experience should sound alarm bells and make you want to run in a different direction (gestures at all of US history).
 

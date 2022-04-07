@@ -11,7 +11,7 @@ description: Web Developer and Fartsy artist living in the Bay area.
 
 ## Where I'm at.
 
-I work at a [Boldium](https://boldium.com), where I work with a great team of people solving problems and building websites for clients, while still caring about the planet and people.
+I work at [Boldium](https://boldium.com), where I work with a great team of people solving problems and building websites for clients, while still caring about the planet and people.
 
 ## I kill time making art(ish)
 
