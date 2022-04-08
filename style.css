@@ -136,7 +136,7 @@ nav * + * {
 
 main {
     background-color: #fff;
-    padding: 3rem var(--container-padding-x);
+    padding: 0 var(--container-padding-x) var(--container-padding-x);
     margin: 0 0 auto;
 }
 
@@ -150,6 +150,7 @@ h1 {
     font-size: clamp(1.875rem, calc(.875rem + 4vw), 4.5rem);
     font-variation-settings: 'opsz'36;
     scroll-margin: 1em 0 0;
+    margin-top: calc(1em + .5rem);
 }
 
 h2 {
