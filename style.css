@@ -148,7 +148,7 @@ main>* {
 
 h1 {
     font-size: 3em;
-    font-size: clamp(1rem, calc(.875rem + 4vw), 4.5rem);
+    font-size: clamp(1.875rem, calc(.875rem + 4vw), 4.5rem);
     font-variation-settings: 'opsz'36;
     scroll-margin: 1em 0 0;
 }
@@ -159,7 +159,7 @@ nav+h1 {
 
 h2 {
     font-size: 2em;
-    font-size: clamp(1rem, calc(.875rem + 2vw), 3rem);
+    font-size: clamp(1.75rem, calc(.875rem + 2vw), 3rem);
     font-variation-settings: 'opsz'36;
 }
 
