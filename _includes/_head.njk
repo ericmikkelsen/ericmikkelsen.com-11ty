@@ -23,13 +23,14 @@
         <nav>
             <ul>
                 {% for link in nav %}
-                    <li {{ "class=nav__current-li" if link.url == page.url}}>
+                    <li>
                         <a 
                             href="{{link.url}}"
                             {{ "aria-current=page" if link.url == page.url}}
-                        >
-                            {{link.text|safe}}
-                        </a>
+                        >{{link.text|safe}}</a>
+                        {% if link.url == page.url %}
+                            <small>You are here.</small>
+                        {% endif %}
                     </li>
                 {% endfor %}
             </ul>
