@@ -272,3 +272,14 @@ pre {
         page-break-before:always;
     }
 }
+.m-0 {
+    margin: 0;
+}
+@media (min-width:40em) {
+    .sm\:inline {
+        display: inline;
+    }
+    .sm\:hidden {
+        display: none;
+    }
+}

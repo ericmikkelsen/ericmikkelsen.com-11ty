@@ -29,7 +29,7 @@
                             {{ "aria-current=page" if link.url == page.url}}
                         >{{link.text|safe}}</a>
                         {% if link.url == page.url %}
-                            <span aria-hidden='true'>● <i>You are here.</i></span>       
+                            <span aria-hidden='true'>● <small class='sm:hidden m-0'><i>You're here</i></small><i hidden class='sm:inline m-0'>You are here.</i></span>       
                         {% endif %}
                     </li>
                 {% endfor %}
