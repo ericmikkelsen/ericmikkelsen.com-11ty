@@ -5,6 +5,23 @@
     font-weight: 100 900;
     font-display: swap;
 }
+html {
+    font-size: 16px;
+    font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
+    color: #000;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    border-bottom: none;
+    border-top: none;
+    font-family: Fraunces, Georgia, 'Times New Roman', Times, serif;
+    font-variation-settings: 'opsz'0;
+    background-size: auto 1080px;
+    /* background-image: url('/static/images/speckles.svg'); */
+    background-repeat: no-repeat;
+    --cta-padding-y: .625rem;
+    --cta-outer-y: .5rem;
+    --container-padding-x: 10%;
+}
 body{
     scrollbar-color: black white;
     scrollbar-width: 3.75em;
@@ -46,23 +63,6 @@ body{
 
 }
 
-html {
-    font-size: 16px;
-    font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
-    color: #000;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    border-bottom: none;
-    border-top: none;
-    font-family: Fraunces, Georgia, 'Times New Roman', Times, serif;
-    font-variation-settings: 'opsz'9;
-    background-size: auto 1080px;
-    /* background-image: url('/static/images/speckles.svg'); */
-    background-repeat: no-repeat;
-    --cta-padding-y: .625rem;
-    --cta-outer-y: .5rem;
-    --container-padding-x: 10%;
-}
 hr {
     border: none;
     border-top: 1px solid;
@@ -117,13 +117,19 @@ body {
 nav {
     padding: var(--cta-outer-y) var(--container-padding-x);
     margin: 0;
+    font-variation-settings: 'opsz'0;
 }
 
-nav a,
-nav span {
+nav a {
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
+    margin: 0 !important;
+}
+nav span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
 }
 nav * {
     margin:0;
@@ -148,7 +154,6 @@ main>* {
 h1 {
     font-size: 3em;
     font-size: clamp(1.875rem, calc(.875rem + 4vw), 4.5rem);
-    font-variation-settings: 'opsz'36;
     scroll-margin: 1em 0 0;
     margin-top: calc(1em + .5rem);
 }
@@ -156,11 +161,11 @@ h1 {
 h2 {
     font-size: 2em;
     font-size: clamp(1.75rem, calc(.875rem + 2vw), 3rem);
-    font-variation-settings: 'opsz'36;
 }
 
 h1, h2, h3, h4, h5, h6 {
     max-width: 28ch;
+    font-variation-settings: 'opsz'36;
 }
 
 *+ :where(h2, h3, h4, h5, h6,hr) {
@@ -185,10 +190,6 @@ a:hover {
 
 a:active {
     text-decoration-thickness: .1em;
-}
-nav small {
-    font-weight: 200;
-    font-variation-settings: 'opsz'0;
 }
 
 summary {
