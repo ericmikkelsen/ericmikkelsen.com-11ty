@@ -1,6 +1,6 @@
 ---
 title: Projects
-colleciton: projects
+collection: projects
 layout: collection.njk
 ---
 
