@@ -13,5 +13,7 @@ I thought it'd be super neat to load a whole website in a qr code using [data UR
 
 [MDN on security of top level Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs#security_issues:~:text=the%20URL%20represents.-,Security%20issues,-A%20number%20of)
 
-That makes sense. Now I get why Nicholas Jitkoff made [bitty.site](https://about.bitty.site), which does a bunch of voodoo to compress a site into the URL. You still need to have had an internet connection at some point. But it's not a bad work around.
+That makes sense. There's a certain amount of accountability when you have a server hosting something.
+
+Now I get why Nicholas Jitkoff made [bitty.site](https://about.bitty.site), which does a bunch of voodoo to compress a site into the URL. You still need to have had an internet connection at some point. But it's not a bad work around.
 
