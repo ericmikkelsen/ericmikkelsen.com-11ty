@@ -195,11 +195,10 @@ a:active {
 }
 
 blockquote {
-    padding-left: 5%;
+    font-style: italic;
 }
 blockquote + p {
     margin-top: 0;
-    padding-left: 5%;
 }
 blockquote + p:before {
     content: '— ';
