@@ -1,5 +1,5 @@
 ---
-title: TIL, You cannot use data URLs in QR codes
+title: TIL, Data URLs don't work in QR codes
 date: 2022-08-24
 layout: single-post.njk
 tags: blog
