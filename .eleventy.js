@@ -8,6 +8,9 @@ module.exports = function(eleventyConfig) {
         "css" // css is not yet a recognized template extension in Eleventy
     ]);
     eleventyConfig.addFilter("postDate", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_HUGE);
+    });
+    eleventyConfig.addFilter("postDateTime", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.toISODate);
     });
 };
