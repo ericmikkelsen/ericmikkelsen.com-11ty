@@ -5,15 +5,20 @@
             <h1 id="h1">{{title}}</h1>
         </header>
         {{content | safe}}
-        {% set items = collections[colleciton] %}
+        {% set items = collections[collection] %}
         <ul>
-        {% for item in items %}
-                {% if item.data.excerpt %}
+        {% for item in items|reverse %}
                     <li>
                         <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
-                        <p>{{item.data.excerpt}}</p>
+                        {% if item.data.date %}
+                            <div>
+                                <time datetime='{{item.data.date|postDateTime}}'>{{item.data.date|postDate}}</time>
+                            </div>
+                        {% endif %}
+                        {% if item.data.excerpt %}
+                            <p>{{item.data.excerpt}}</p>
+                        {% endif %}
                     </li>
-                {% endif %}
         {% endfor %}
         </ul>
     </main>

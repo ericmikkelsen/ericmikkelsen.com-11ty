@@ -3,6 +3,7 @@ title: I dig Universal Design
 description: 
 date: 2022-03-25
 layout: single-post.njk
+tags: blog
 ---
 
 I hate [kickers](https://medium.com/new-writers-welcome/so-thats-the-kicker-7c4670e3d9b5), aka eyebrow copy (no shade to Casey Lawrence's article, it does look great). It's not because I think words above a heading look weird. It's because on the web, content that supports a heading is supposed to come _after_ the heading. That's because one common way that people use screen readers to navigate a page is by listening to a list of headings then moving to one of those headings. If eyebrow copy is above the headline, that means the eyebrow copy isn't read.
@@ -31,9 +32,11 @@ The boxes in this metaphor aren't something we do to make websites usable, the b
 
 ## Ok, here's why I dig Universal Design
 
-This is why I dig [Universal Design](https://universaldesign.ie/what-is-universal-design/). I dig it because of it's first principle: 
+This is why I dig Universal Design. I dig it because of it's first principle: 
 
->Provide the same means of use for all users: identical whenever possible; equivalent when not.
+> Provide the same means of use for all users: identical whenever possible; equivalent when not.
+
+[Centre for Excellence in Universal Design](https://universaldesign.ie/what-is-universal-design/the-7-principles/the-7-principles.html#:~:text=Provide%20the%20same%20means%20of%20use%20for%20all%20users%3A%20identical%20whenever%20possible%3B%20equivalent%20when%20not.)
 
 WCAG(Web Content Accessibility Guidelines) define how we need to build websites, but Universal Design gives us principles for building them. They're like [Gestalt Design Principles](https://www.youtube.com/watch?v=G-xD1bDoNl4) but for interaction (or actually architecture, but hey, they work super well for interaction, too).
 
