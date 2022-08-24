@@ -18,7 +18,7 @@ The text above has more space between lines. While the text below has less space
 
 ## What is a good line height?
 
-Web type nerd Laura Franz says: 
+Web type expert Laura Franz says: 
 > Smaller type tends to need more line height, not less. A generous line height helps the eye to recognize small word shapes more easily, and it encourages horizontal motion when the eye gets tired of reading small text.
 
 [Balancing Line Length & Font Size In Responsive Web Design](https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-height-and-font-size)
