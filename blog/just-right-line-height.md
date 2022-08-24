@@ -3,6 +3,7 @@ title: Just right line height
 description: 
 date: 2021-09-15
 layout: single-post.njk
+tags: blog
 ---
 
 Line height is the extra space above and below your text. It creates extra space between lines of text. You may have heard it being called leading.

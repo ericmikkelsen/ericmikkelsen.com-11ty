@@ -3,6 +3,7 @@ title: I dig Universal Design
 description: 
 date: 2022-03-25
 layout: single-post.njk
+tags: blog
 ---
 
 I hate [kickers](https://medium.com/new-writers-welcome/so-thats-the-kicker-7c4670e3d9b5), aka eyebrow copy (no shade to Casey Lawrence's article, it does look great). It's not because I think words above a heading look weird. It's because on the web, content that supports a heading is supposed to come _after_ the heading. That's because one common way that people use screen readers to navigate a page is by listening to a list of headings then moving to one of those headings. If eyebrow copy is above the headline, that means the eyebrow copy isn't read.
