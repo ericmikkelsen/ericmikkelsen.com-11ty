@@ -6,9 +6,9 @@
         </header>
         {{content | safe}}
         {% set items = collections[collection] %}
-        <ul>
+        <ul class='collection'>
         {% for item in items|reverse %}
-                    <li>
+                    <li class='collection__item'>
                         <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
                         {% if item.data.date %}
                             <div>
