@@ -157,7 +157,9 @@ h1 {
     scroll-margin: 1em 0 0;
     margin-top: calc(1em + .5rem);
 }
-
+h1 + time {
+    display: block;
+}
 h2 {
     font-size: 2em;
     font-size: clamp(1.75rem, calc(.875rem + 2vw), 3rem);
@@ -190,6 +192,17 @@ a:hover {
 
 a:active {
     text-decoration-thickness: .1em;
+}
+
+blockquote {
+    padding-left: 5%;
+}
+blockquote + p {
+    margin-top: 0;
+    padding-left: 5%;
+}
+blockquote + p:before {
+    content: '— ';
 }
 
 summary {
@@ -241,7 +254,9 @@ pre {
     border-radius: 1.5rem;
     white-space: pre-wrap;
 }
-
+time {
+    font-style: italic;
+}
 @media print {
     :root {
         font-size: 1rem;
