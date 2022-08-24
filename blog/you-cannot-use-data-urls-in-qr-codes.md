@@ -11,7 +11,7 @@ I thought it'd be super neat to load a whole website in a qr code using [data UR
 
 > A number of security issues (for example, phishing) have been associated with data URLs, and navigating to them in the browser's top level. To mitigate such issues, top-level navigation to data: URLs is blocked in all modern browsers.
 
-[MDN on security of top level Dat URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs#security_issues:~:text=the%20URL%20represents.-,Security%20issues,-A%20number%20of)
+[MDN on security of top level Data URLs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs#security_issues:~:text=the%20URL%20represents.-,Security%20issues,-A%20number%20of)
 
 That makes sense. Now I get why Nicholas Jitkoff made [bitty.site](https://about.bitty.site), which does a bunch of voodoo to compress a site into the URL. You still need to have had an internet connection at some point. But it's not a bad work around.
 

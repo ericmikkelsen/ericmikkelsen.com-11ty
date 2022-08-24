@@ -19,12 +19,12 @@ The text above has more space between lines. While the text below has less space
 ## What is a good line height?
 
 Web type nerd Laura Franz says: 
-> "Smaller type tends to need more line height, not less. A generous line height helps the eye to recognize small word shapes more easily, and it encourages horizontal motion when the eye gets tired of reading small text."
+> Smaller type tends to need more line height, not less. A generous line height helps the eye to recognize small word shapes more easily, and it encourages horizontal motion when the eye gets tired of reading small text.
 
 [Balancing Line Length & Font Size In Responsive Web Design](https://www.smashingmagazine.com/2014/09/balancing-line-length-font-size-responsive-web-design/#line-height-and-font-size)
 
 And the WCAG Guidline is:
-> "... paragraph spacing is at least 1.5 times larger than the line spacing."
+> ... paragraph spacing is at least 1.5 times larger than the line spacing.
 
 [Web Content Accessibility Guidelines for line height](https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html#:~:text=Line%20spacing%20(leading)%20is%20at%20least%20space-and-a-half%20within%20paragraphs%2C%20and%20paragraph%20spacing%20is%20at%20least%201.5%20times%20larger%20than%20the%20line%20spacing.)
 

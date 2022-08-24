@@ -195,13 +195,27 @@ a:active {
 }
 
 blockquote {
-    font-style: italic;
+    font-size: clamp(1.25rem, calc(.875rem + 1vw), 1.75rem);
+    margin-top: 3rem;
+}
+* + blockquote {
+    margin-top: 1.5rem;
+}
+blockquote::before {
+    content: '“ ';
+}
+blockquote::after {
+    content: ' ”';
+}
+blockquote > p {
+    display: inline;
 }
 blockquote + p {
-    margin-top: 0;
+    margin-top: calc(.5em + .25rem);
+    margin-bottom: 3rem;
 }
 blockquote + p:before {
-    content: '— ';
+    content: '↪ ';
 }
 
 summary {
