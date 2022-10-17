@@ -90,14 +90,13 @@ body {
 *+* {
     margin-top: calc(1em + .5rem);
 }
-script, :where(:empty), :where(:not(:defined)) {
+script, :where(:not(:defined)),div:where(:empty) {
     display: none;
     margin: 0;
 }
 *+li {
     margin-top: calc(.5em + .25rem);
 }
-
 .skip__wrapper {
     background: #000;
     margin: 0;
@@ -246,7 +245,7 @@ header {
     max-width: 100%;
 }
 
-footer {
+.colors {
     border-top: .125rem solid #000;
     background-color: var(--color);
     color: #000;
@@ -259,6 +258,21 @@ img {
     border: .1rem solid var(--color, #767676);
     border-radius: 1.5rem;
 }
+footer {
+    margin: 0;
+}
+.betterweb-badge,
+betterweb-badge {
+    display: inline-block;
+    aspect-ratio: 80/116;
+    max-width: 80%;
+    width: 80px;
+    height: auto;
+    border-radius: 0;
+    border: none;
+    margin-left: 10%;
+    margin-right: 10%;
+} 
 
 pre {
     overflow: auto;
