@@ -90,7 +90,10 @@ body {
 *+* {
     margin-top: calc(1em + .5rem);
 }
-
+script, :where(:empty), :where(:not(:defined)) {
+    display: none;
+    margin: 0;
+}
 *+li {
     margin-top: calc(.5em + .25rem);
 }
