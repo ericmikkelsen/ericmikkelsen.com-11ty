@@ -10,4 +10,4 @@ I'd like to talk to you about Tina. She's my best friend's mom. She is made out 
 
 ## [You should give Tina money](https://www.gofundme.com/f/tina-juhlin-handstand-fund)
 
-Tina has cancer. I don't know what else to tell you, she's an amazing person, mom, grandmom, and gymnist (yep grandma gymnist), and she has cancer. So give her money. I did, and I want you to also. Please.
+Tina has cancer. I don't know what else to tell you, she's an amazing person, mom, grandmom, and gymnist (yep grandma gymnist), and she has cancer. [So give her money](https://www.gofundme.com/f/tina-juhlin-handstand-fund), that's her gofundme page. So please help out.
