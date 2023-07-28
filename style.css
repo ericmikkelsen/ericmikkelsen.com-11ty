@@ -8,8 +8,9 @@ html {
     border-top: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-variation-settings: 'opsz'0;
+    background-color: #000;
     background-size: auto 1080px;
-    /* background-image: url('/static/images/speckles.svg'); */
+    background-image: url('/static/images/speckles.svg');
     background-repeat: no-repeat;
     --cta-padding-y: .625rem;
     --cta-outer-y: .5rem;
@@ -24,8 +25,12 @@ body{
     flex-direction: column;
 }
 ::selection {
-    background: var(--selection-bg,var(--color));
+    background: var(--selection-bg,#000);
     color: var(--selection,#fff);
+}
+a::selection {
+    background: var(--selection-a-bg,#000);
+    color: var(--selection-a,#fff);
 }
 ::-webkit-scrollbar {
     --down-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M38 16H10l14 24z'/%3E%3C/svg%3E");
@@ -100,6 +105,7 @@ script, :where(:not(:defined)),div:where(:empty) {
 }
 
 .skip__link {
+    background: #000;
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
@@ -116,15 +122,22 @@ nav {
 }
 
 nav a {
+    color: #fff;
+    background-color: #000;
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
     margin: 0 !important;
 }
+nav a:hover {
+    text-decoration-color:var(--color);
+}
 nav span {
     display: inline-block;
     padding: 0;
     margin: 0;
+    color: #fff;
+    background-color: #000;
 }
 nav * {
     margin:0;
@@ -178,6 +191,7 @@ a {
     padding: .125rem;
     outline-offset: 0rem;
     border-radius: .25rem;
+    transition: .15s;
 }
 
 a:hover {
@@ -318,8 +332,6 @@ time {
     max-width: 32em;
 }
 .collection__item > a {
-    display: block;
-    width: 100%;
     font-size: 2rem;
     font-weight: 700;
 }

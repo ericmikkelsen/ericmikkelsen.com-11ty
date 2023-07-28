@@ -6,20 +6,21 @@
         </header>
         {{content | safe}}
         {% set items = collections[collection] %}
-        <ul class='collection'>
+        {% set reversed = 'reversed' if reverse_collection else '' %}
+        <ol class='collection' {{reversed}} >
         {% for item in items|reverse %}
                     <li class='collection__item'>
-                        <h2><a href='{{item.data.page.url}}'>{{item.data.title}}</a></h2>
-                        {% if item.data.date %}
-                            <div>
-                                <time datetime='{{item.data.date|postDateTime}}'>{{item.data.date|postDate}}</time>
-                            </div>
-                        {% endif %}
+                        {% set link %}
+                            <a href='{{item.data.page.url}}'>{{item.data.title}}</a>
+                        {% endset %}
                         {% if item.data.excerpt %}
+                            <h2>{{link|safe}}</h2>
                             <p>{{item.data.excerpt}}</p>
+                        {% else %}
+                            {{link|safe}}
                         {% endif %}
                     </li>
         {% endfor %}
-        </ul>
+        </ol>
     </main>
 {% include "_footer.njk" %}
