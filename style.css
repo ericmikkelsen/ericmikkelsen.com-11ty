@@ -1,10 +1,3 @@
-@font-face {
-    font-family: Fraunces;
-    src: url("/static/fonts/Fraunces[SOFT,WONK,opsz,wght].woff2") format('woff2');
-    font-style: normal;
-    font-weight: 100 900;
-    font-display: swap;
-}
 html {
     font-size: 16px;
     font-size: clamp(1.25rem, calc(.5rem + 1vw), 10rem);
@@ -13,10 +6,11 @@ html {
     min-height: -webkit-fill-available;
     border-bottom: none;
     border-top: none;
-    font-family: Fraunces, Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-variation-settings: 'opsz'0;
+    background-color: #000;
     background-size: auto 1080px;
-    /* background-image: url('/static/images/speckles.svg'); */
+    background-image: url('/static/images/speckles.svg');
     background-repeat: no-repeat;
     --cta-padding-y: .625rem;
     --cta-outer-y: .5rem;
@@ -31,8 +25,12 @@ body{
     flex-direction: column;
 }
 ::selection {
-    background: var(--selection-bg,var(--color));
+    background: var(--selection-bg,#000);
     color: var(--selection,#fff);
+}
+a::selection {
+    background: var(--selection-a-bg,#000);
+    color: var(--selection-a,#fff);
 }
 ::-webkit-scrollbar {
     --down-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M38 16H10l14 24z'/%3E%3C/svg%3E");
@@ -107,6 +105,7 @@ script, :where(:not(:defined)),div:where(:empty) {
 }
 
 .skip__link {
+    background: #000;
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
@@ -123,15 +122,22 @@ nav {
 }
 
 nav a {
+    color: #fff;
+    background-color: #000;
     display: inline-block;
     padding-top: var(--cta-padding-y);
     padding-bottom: var(--cta-padding-y);
     margin: 0 !important;
 }
+nav a:hover {
+    text-decoration-color:var(--color);
+}
 nav span {
     display: inline-block;
     padding: 0;
     margin: 0;
+    color: #fff;
+    background-color: #000;
 }
 nav * {
     margin:0;
@@ -185,6 +191,7 @@ a {
     padding: .125rem;
     outline-offset: 0rem;
     border-radius: .25rem;
+    transition: .15s;
 }
 
 a:hover {
@@ -318,13 +325,18 @@ time {
     }
 }
 .collection {
-    max-width: max-content;
+    /* max-width: max-content; */
+    max-width: 100%;
 }
-.collection__item > * {
+.collection__item > p {
     max-width: 32em;
 }
+.collection__item > a {
+    font-size: 2rem;
+    font-weight: 700;
+}
 * + .collection__item {
-    margin-top: 3em;
+    margin-top: 1.5em;
 }
 
 .m-0 {
