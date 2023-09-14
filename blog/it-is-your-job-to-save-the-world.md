@@ -9,7 +9,7 @@ I turn 42 in a couple days, and I'm realizing the world isn't going to be saved 
 
 The only place any of us have access to the kind of scale we need to operate on, is at work. Most of us are making decisions daily for an organization. And those decisions have far greater impacts than anything we do for ourselves.
 
-When I worked at Starbucks, if I said "I'm going to give away drinks to everyone who brings in their own cup for the next 2 weeks", then if everyone for 2 months afterwards brought in their own cup, that'd be so much more than I could do in my personal time. I'm still not going to single handedly do this, but by thinking about this at my day job, I'm have a far greater impact.
+When I worked at Starbucks, if I said "I'm going to give away drinks to everyone who brings in their own cup for the next 2 weeks", then if everyone for 2 months afterwards brought in their own cup because they were use to it, that'd be so much more than I could do in my personal time. I'm still not going to single handedly do this, but by thinking about this at my day job, I'm going to have a far greater impact.
 
 That means something pretty radical though: *It's your bosses job to pay you, to save the world.* It's just not going to work any other way. If you can't make an impact at work. It's just not going to happen. So it's gotta happen there. 
 
