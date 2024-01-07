@@ -1,7 +1,15 @@
 {% include "_head.njk" %}
     <main>
         <header>
-            <h1 id="h1">{{title}}</h1>
+            <h1 id="h1">
+                {% if url %}
+                    <a href="{{url}}">
+                        {{title}}
+                    </a>
+                {% else %}
+                    {{title}}
+                {% endif %}
+            </h1>
         </header>
         {{content | safe}}
     </main>
