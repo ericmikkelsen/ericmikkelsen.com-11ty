@@ -1,5 +1,5 @@
 ---
-excerpt: colors.fyi is a site that lists all the colors that are WCAG AA accessible.
+excerpt: colors.fyi is a site that lists all the colors that are WCAG AA accessible with both black and white.
 tags: projects
 title: Colors.fyi
 url: https://colors.fyi/
