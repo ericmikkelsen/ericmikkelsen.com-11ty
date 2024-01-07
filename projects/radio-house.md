@@ -4,15 +4,10 @@ image: /images/portfolio/radio-house.png
 image-featured: /images/portfolio/radio-house-featured.png
 tags: projects
 title: Radio House
+url: https://radio-house.app/
 ---
 
-[Radio House](https://radio-house.app) is an app to play local mp3 files.
-
-
-## My problem with the internet, planes, and music.
-
 Every single time I take a trip on a plane I'm stuck doing a thing I despise. Use iTunes. And every time I have to wait 5 minutes for it to catalogue all the music I have on my machine. The christmas mixes I've made my mom between now and the last time I opened Itunes, the memes, the fart noises I send to my wife in emails. Everything. It's the worst. I just want Winamp basically. I want a simple thing I could open up and add some songs, and get rolling. And I wanted it in a browser, because I love the web. (And like, I'm a web developer)
-
 
 ## Goals
 

@@ -10,11 +10,8 @@ breadcrumbs:
  - url: /portfolio
    text: portfolio
  - text: tca
+url: https://tribunecontentagency.com/
 ---
-
-[Tribune Content Agency's site](https://tribunecontentagency.com/).
-
-## Tribune Content Agency
 
 While I was at Tribune Publishing this was my first real big project. I got to build a massive site, that would hold tons of content, use several custom post types and custom taxonomies. There's stuff that's weird about how I handled stuff, but I think mostly the site still holds up from a development perspective.
 
