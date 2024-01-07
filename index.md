@@ -1,13 +1,10 @@
 ---
-title: One more bay area guy making websites.
+title: Web Accessibility Specialist & UX Engineer
 permalink: /
 layout: index.njk
 description: Web Developer and Fartsy artist living in the Bay area.
 ---
-
- I'm a web developer. If you're in the tech world, that means I love CSS, write Javscript, can do React/Vue/Svelte, worry about accessbility, obsess over performance, program in HTML, and started on Wordpress.
-
- If you're my Aunt Sophie (HI SOPHIE!), that means I make websites.
+I've been alot of stuff, I started as the guy who said "Um boss, CSS can do that", and I've graduated to being the guy who says "this is how I can make this work for screen readers and keyboard users, can you make this one small tweek to the design?".
 
 ## Where I'm at.
 
@@ -15,4 +12,4 @@ I work at [Boldium](https://boldium.com), where I work with a great team of peop
 
 ## I kill time making art(ish)
 
-I love glitching, screen printing, generative-ing, risographing, and pixelating.
+I spend as much time as possible playing with my kid. When I have weird sideways time, I make pizza, roast coffee, and go for bike rides.
